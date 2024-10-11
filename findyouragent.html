@@ -1,0 +1,459 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORIX</title>
+    <link rel="icon" href="/pics/aloo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="/findyouragent.css">
+    <script src="/base.js"></script>
+    <style>
+    
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: none; /* Initially hidden */
+        }
+        #result.active {
+            display: block; /* Show when active */
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE HTML>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VALORIX</title>
+        <link rel="icon" href="/pics/logos.png" type="image/png" sizes="16x16">
+    
+    <link rel="stylesheet" href="/base.css">
+    <script src="base.js"></script>
+    </head>
+    <body>
+        
+        <header>
+            <div class="logo-container">
+                <img src="/pics/logos.png" alt="logos" class="logos" onclick="goHome()">
+                <h1  onclick="goHome()" style="font-size: 27px;">VALORIX</h1>
+            </div>
+            <nav>
+                <div class="nav-links">
+                    <a href="/base.html">Home</a>
+                    <a href="/AGENTS.html">Agents</a>
+                    <a href="/maps.html">Maps</a>
+                    <a href="/news.html">News</a>
+                    <a href="/findyouragent.html" style="border-right:6px solid #ff5765";>Find Your Agent</a>
+                
+                </div>
+               
+            </nav>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="menu">
+                <a href="base.html">Home</a>
+                <a href="AGENTS.html">Agents</a>
+                <a href="/maps.html">Maps</a>
+                <a href="/news.html">News</a>
+                <a href="/findyouragent.html">Find Your Agent</a>
+               
+            </div>
+        </header>
+             <h1 class="theh1">Find Your Role & Agent</h1>
+    <section class="quiz-container">
+       
+        <form id="quiz-form">
+            <div class="question">
+                <h3>Question 1: What's your playstyle?</h3>
+                <label><input type="radio" name="q1" value="duelist"> Aggressive</label>
+                <label><input type="radio" name="q1" value="controller"> Control</label>
+                <label><input type="radio" name="q1" value="initiator"> Support</label>
+                <label><input type="radio" name="q1" value="sentinel"> Defensive</label>
+            </div>
+    
+            <div class="question">
+                <h3>Question 2: How do you prefer to handle enemies?</h3>
+                <label><input type="radio" name="q2" value="duelist"> Go in aggressively</label>
+                <label><input type="radio" name="q2" value="controller"> Control the area</label>
+                <label><input type="radio" name="q2" value="initiator"> Set up support plays</label>
+                <label><input type="radio" name="q2" value="sentinel"> Defend from behind</label>
+            </div>
+    
+            <div class="question">
+                <h3>Question 3: What's your preferred engagement distance?</h3>
+                <label><input type="radio" name="q3" value="close"> Close range</label>
+                <label><input type="radio" name="q3" value="medium"> Medium range</label>
+                <label><input type="radio" name="q3" value="long"> Long range</label>
+                <label><input type="radio" name="q3" value="all"> Any distance</label>
+            </div>
+    
+            <div class="question">
+                <h3>Question 4: How do you prefer to communicate with your team?</h3>
+                <label><input type="radio" name="q4" value="voice"> Voice chat</label>
+                <label><input type="radio" name="q4" value="text"> Text chat</label>
+                <label><input type="radio" name="q4" value="ping"> Using pings</label>
+                <label><input type="radio" name="q4" value="silent"> Silent</label>
+            </div>
+    
+            <div class="question">
+                <h3>Question 5: What role do you enjoy the most?</h3>
+                <label><input type="radio" name="q5" value="duelist"> Duelist</label>
+                <label><input type="radio" name="q5" value="controller"> Controller</label>
+                <label><input type="radio" name="q5" value="initiator"> Initiator</label>
+                <label><input type="radio" name="q5" value="sentinel"> Sentinel</label>
+            </div>
+    
+            <div class="question">
+                <h3>Question 6: How often do you play aggressively?</h3>
+                <label><input type="radio" name="q6" value="always"> Always</label>
+                <label><input type="radio" name="q6" value="often"> Often</label>
+                <label><input type="radio" name="q6" value="sometimes"> Sometimes</label>
+                <label><input type="radio" name="q6" value="rarely"> Rarely</label>
+            </div>
+    
+            <div class="question">
+                <h3>Question 7: Do you prefer to lead your team?</h3>
+                <label><input type="radio" name="q7" value="yes"> Yes</label>
+                <label><input type="radio" name="q7" value="no"> No</label>
+            </div>
+    
+            <div class="question">
+                <h3>Question 8: How do you deal with losing?</h3>
+                <label><input type="radio" name="q8" value="stay-calm"> Stay calm</label>
+                <label><input type="radio" name="q8" value="blame"> Blame others</label>
+                <label><input type="radio" name="q8" value="learn"> Learn from mistakes</label>
+                <label><input type="radio" name="q8" value="rage"> Rage quit</label>
+            </div>
+    
+            <div class="question">
+                <h3>Question 9: What’s your preferred map type?</h3>
+                <label><input type="radio" name="q9" value="open"> Open maps</label>
+                <label><input type="radio" name="q9" value="tight"> Tight maps</label>
+                <label><input type="radio" name="q9" value="balanced"> Balanced maps</label>
+                <label><input type="radio" name="q9" value="all"> All types</label>
+            </div>
+    
+            <div class="question">
+                <h3>Question 10: What motivates you to play?</h3>
+                <label><input type="radio" name="q10" value="winning"> Winning</label>
+                <label><input type="radio" name="q10" value="fun"> Fun</label>
+                <label><input type="radio" name="q10" value="friends"> Playing with friends</label>
+                <label><input type="radio" name="q10" value="improving"> Improving skills</label>
+            </div>
+            <div class="question">
+                <h3>Question 11: How do you feel about taking risks?</h3>
+                <label><input type="radio" name="q11" value="high"> I take high risks</label>
+                <label><input type="radio" name="q11" value="moderate"> I take moderate risks</label>
+                <label><input type="radio" name="q11" value="low"> I avoid risks</label>
+                <label><input type="radio" name="q11" value="depends"> It depends on the situation</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 12: What's your ideal team composition?</h3>
+                <label><input type="radio" name="q12" value="balanced"> A balanced team</label>
+                <label><input type="radio" name="q12" value="aggressive"> An aggressive team</label>
+                <label><input type="radio" name="q12" value="defensive"> A defensive team</label>
+                <label><input type="radio" name="q12" value="flexible"> A flexible team</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 13: How do you react to feedback?</h3>
+                <label><input type="radio" name="q13" value="accept"> I accept it well</label>
+                <label><input type="radio" name="q13" value="defensive"> I get defensive</label>
+                <label><input type="radio" name="q13" value="consider"> I consider it</label>
+                <label><input type="radio" name="q13" value="ignore"> I often ignore it</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 14: What’s your approach to teamwork?</h3>
+                <label><input type="radio" name="q14" value="leader"> I like to lead</label>
+                <label><input type="radio" name="q14" value="support"> I prefer to support</label>
+                <label><input type="radio" name="q14" value="collaborate"> I like to collaborate equally</label>
+                <label><input type="radio" name="q14" value="independent"> I work best independently</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 15: How often do you watch pro games or streams?</h3>
+                <label><input type="radio" name="q15" value="always"> Always</label>
+                <label><input type="radio" name="q15" value="sometimes"> Sometimes</label>
+                <label><input type="radio" name="q15" value="rarely"> Rarely</label>
+                <label><input type="radio" name="q15" value="never"> Never</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 16: Do you prefer playing solo or with a team?</h3>
+                <label><input type="radio" name="q16" value="solo"> Solo</label>
+                <label><input type="radio" name="q16" value="team"> With a team</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 17: What’s your preferred game mode?</h3>
+                <label><input type="radio" name="q17" value="ranked"> Ranked</label>
+                <label><input type="radio" name="q17" value="casual"> Casual</label>
+                <label><input type="radio" name="q17" value="custom"> Custom games</label>
+                <label><input type="radio" name="q17" value="all"> All types</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 18: How do you feel about using voice communication?</h3>
+                <label><input type="radio" name="q18" value="comfortable"> I'm comfortable</label>
+                <label><input type="radio" name="q18" value="neutral"> I'm neutral</label>
+                <label><input type="radio" name="q18" value="uncomfortable"> I'm uncomfortable</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 19: How do you handle stress during a match?</h3>
+                <label><input type="radio" name="q19" value="stay-calm"> I stay calm</label>
+                <label><input type="radio" name="q19" value="focus"> I focus harder</label>
+                <label><input type="radio" name="q19" value="panic"> I tend to panic</label>
+                <label><input type="radio" name="q19" value="laugh"> I try to laugh it off</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 20: What's your favorite part of playing games?</h3>
+                <label><input type="radio" name="q20" value="strategy"> Strategy</label>
+                <label><input type="radio" name="q20" value="action"> Action</label>
+                <label><input type="radio" name="q20" value="teamwork"> Teamwork</label>
+                <label><input type="radio" name="q20" value="exploration"> Exploration</label>
+            </div>
+            <div class="question">
+                <h3>Question 21: Which game mode do you prefer?</h3>
+                <label><input type="radio" name="q21" value="solo"> Solo</label>
+                <label><input type="radio" name="q21" value="duo"> Duo</label>
+                <label><input type="radio" name="q21" value="squad"> Squad</label>
+                <label><input type="radio" name="q21" value="custom"> Custom</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 22: How do you feel about teamwork in games?</h3>
+                <label><input type="radio" name="q22" value="love"> Love it</label>
+                <label><input type="radio" name="q22" value="like"> Like it</label>
+                <label><input type="radio" name="q22" value="neutral"> Neutral</label>
+                <label><input type="radio" name="q22" value="dislike"> Dislike it</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 23: What's your favorite genre of games?</h3>
+                <label><input type="radio" name="q23" value="fps"> First-person Shooter</label>
+                <label><input type="radio" name="q23" value="rpg"> Role-playing Game</label>
+                <label><input type="radio" name="q23" value="strategy"> Strategy</label>
+                <label><input type="radio" name="q23" value="puzzle"> Puzzle</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 24: How often do you play video games?</h3>
+                <label><input type="radio" name="q24" value="daily"> Daily</label>
+                <label><input type="radio" name="q24" value="weekly"> Weekly</label>
+                <label><input type="radio" name="q24" value="monthly"> Monthly</label>
+                <label><input type="radio" name="q24" value="rarely"> Rarely</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 25: Do you prefer single-player or multiplayer games?</h3>
+                <label><input type="radio" name="q25" value="single"> Single-player</label>
+                <label><input type="radio" name="q25" value="multiplayer"> Multiplayer</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 26: What's your favorite gaming platform?</h3>
+                <label><input type="radio" name="q26" value="pc"> PC</label>
+                <label><input type="radio" name="q26" value="console"> Console</label>
+                <label><input type="radio" name="q26" value="mobile"> Mobile</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 27: How important are graphics to you in a game?</h3>
+                <label><input type="radio" name="q27" value="very"> Very Important</label>
+                <label><input type="radio" name="q27" value="somewhat"> Somewhat Important</label>
+                <label><input type="radio" name="q27" value="not"> Not Important</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 28: What motivates you to play a game?</h3>
+                <label><input type="radio" name="q28" value="story"> Story</label>
+                <label><input type="radio" name="q28" value="competition"> Competition</label>
+                <label><input type="radio" name="q28" value="friends"> Friends</label>
+                <label><input type="radio" name="q28" value="challenge"> Challenge</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 29: How do you prefer to learn about new games?</h3>
+                <label><input type="radio" name="q29" value="friends"> Friends</label>
+                <label><input type="radio" name="q29" value="reviews"> Reviews</label>
+                <label><input type="radio" name="q29" value="trailers"> Trailers</label>
+            </div>
+            
+            <div class="question">
+                <h3>Question 30: What's your favorite way to play a game?</h3>
+                <label><input type="radio" name="q30" value="casual"> Casual</label>
+                <label><input type="radio" name="q30" value="competitive"> Competitive</label>
+                <label><input type="radio" name="q30" value="story-driven"> Story-driven</label>
+            </div>
+    
+        
+        </form>
+        <div id="result" aria-live="polite">
+            <h3>"The Recommendations"</h2>
+            <p id="agent-name"></p>
+        </div>
+    </section>
+    <footer>
+        <div class="column">
+            <h3>Contact us</h3>
+            <p>Address: AON Center, 200 East Randolph Street, Suite 5100, Chicago, IL 60601.</p>
+            <p>Phone: +01 2222 365 / (+91) 01 2345 6789</p>
+            <p>Email: support@valorantweb.com</p>
+            <p>Business Hours: 10:00 - 18:00, Mon - Sat</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100024519590806&mibextid=ZbWKwL"><img src="/5296499_fb_facebook_facebook logo_icon.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/shehab_diff?igsh=MTg5YWtjMWU4M2JqYg=="><img src="/pics/instagram_2111463.png" alt="Instagram"></a>
+                <a href="https://x.com/VALORANT"><img src="/pics/twitter-alt-circle_12107562.png" alt="Twitter" style="background-color:whitesmoke; border-radius: 100%;"></a>
+                <a href="https://www.youtube.com/channel/UC8CX0LD98EDXl4UYX1MDCXg"><img src="/pics/youtube_4494485.png" alt="YouTube"></a>
+            </div>
+            
+        </div>
+        <div class="column">
+            <h3>About</h3>
+            <p><a href="#">About Us</a> </p>
+            <p>
+             <a href="#">Our Mission</a>
+            </p>
+            <p>
+                <a href="#">Privacy Policy</a>
+            </p>
+            <p>
+                <a href="#">Terms & Conditions</a>
+            </p>
+            <p>
+                <a href="#">Contact Us</a>
+            </p>
+            
+        </div>
+    </footer>  
+    </body>
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    if (hamburger && menu) {
+        hamburger.addEventListener('click', function() {
+            menu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    }
+
+    const quizForm = document.getElementById('quiz-form');
+    const resultDiv = document.getElementById('result');
+    const agentName = document.getElementById('agent-name');
+    const questions = document.querySelectorAll('.question');
+    let currentQuestionIndex = 0;
+
+    // Show the first question
+    showQuestion(currentQuestionIndex);
+
+    function showQuestion(index) {
+        questions.forEach((question, i) => {
+            question.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    function scrollToNextQuestion() {
+        if (currentQuestionIndex < questions.length - 1) {
+            currentQuestionIndex++;
+            showQuestion(currentQuestionIndex);
+        } else {
+            const result = getRecommendedAgent();
+            agentName.innerHTML = result;
+            resultDiv.classList.add('active'); // Show result section
+            hideQuestions(); // Hide all questions after submission
+        }
+    }
+
+    // Attach click event to radio buttons for scrolling
+    questions.forEach(question => {
+        const inputs = question.querySelectorAll('input[type="radio"]');
+        inputs.forEach(input => {
+            input.addEventListener('click', scrollToNextQuestion);
+        });
+    });
+
+    function hideQuestions() {
+        questions.forEach(question => {
+            question.style.display = 'none';
+        });
+    }
+
+    function getRecommendedAgent() {
+        const answers = Array.from(questions).map(question => {
+            const checked = question.querySelector('input[type="radio"]:checked');
+            return checked ? checked.value : null;
+        });
+
+        // Check if all questions have been answered
+        if (answers.includes(null)) {
+            return "Please answer all questions to get a recommendation!";
+        }
+
+        // Process answers to find the recommended agent
+        const roles = {
+            duelist: "Duelist - Try Jett or Phoenix",
+            controller: "Controller - Try Brimstone or Omen",
+            initiator: "Initiator - Try Sova or Gekko",
+            sentinel: "Sentinel - Try Sage or Deadlock",
+        };
+
+        // Example logic to aggregate answers and get a recommendation
+        let roleCount = {
+            duelist: 0,
+            controller: 0,
+            initiator: 0,
+            sentinel: 0
+        };
+
+        // Increment the count of each role based on the answers
+        answers.forEach(answer => {
+            if (roleCount[answer] !== undefined) {
+                roleCount[answer]++;
+            }
+        });
+
+        // Find the role with the highest count
+        const bestRole = Object.keys(roleCount).reduce((a, b) => roleCount[a] > roleCount[b] ? a : b);
+
+        return `<strong>Role:</strong> ${bestRole} <br> <strong>Recommended Agent:</strong> ${roles[bestRole] || "No recommendations available"}`;
+    }
+});
+        // Function to toggle menu visibility and hamburger rotation
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    const hamburger = document.querySelector('.hamburger');
+    
+    menu.classList.toggle('active'); // Toggle menu visibility
+    hamburger.classList.toggle('active'); // Toggle hamburger rotation
+}
+
+// Function to navigate to home page
+function goHome() {
+    window.location.href = 'base.html';
+}
+
+// Add event listener to toggle menu on hamburger click when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', function() {
+        toggleMenu(); // Call the function to handle both menu and hamburger
+    });
+});
+
+    </script>
+  
+</body>
+</html>

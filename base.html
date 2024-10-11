@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORIX</title>
+    <link rel="icon" href="/pics/aloo.png" type="image/png" sizes="16x16">
+
+
+<link rel="stylesheet" href="/base.css">
+<script src="base.js"></script>
+</head>
+<body>
+    
+    <header>
+        
+        <div class="logo-container" >
+            <img src="/pics/logos.png" alt="logos" class="logos" onclick="goHome()">
+            <h1  onclick="goHome()" style="font-size: 27px;">VALORIX</h1>
+        </div>
+        <div class="mid-photos">
+            <div class="mid-photo-container">
+                <img src="/pics/cypherpng-removebg-preview.png" alt="Cypher" class="mid-photo" style="margin-top: 30px; margin-left: 4px; left: 20px;">
+            </div>
+            <div class="mid-photo-container">
+                <img src="/pics/gekkopng.png" alt="Gekko" class="mid-photo" style="margin-top: 60px;margin-left: -100px; margin-right: 80px;" >
+            </div>
+        </div>
+        
+        <nav>
+            <div class="nav-links">
+                <a href="/base.html">Home</a>
+                <a href="/AGENTS.html">Agents</a>
+                <a href="/maps.html">Maps</a>
+                <a href="/news.html">News</a>
+                <a href="/findyouragent.html">Find Your Agent</a>
+            </div>
+        </nav>
+        
+        <div class="mid-photos">
+            <div class="mid-photo-container">
+                <img src="/pics/reyna_png-removebg-preview.png" alt="Reyna" class="mid-photo" style="margin-top: 20px; margin-left: 3px;">
+            </div>
+            <div class="mid-photo-container">
+                <img src="/pics/chamberpngg-removebg-preview.png" alt="Chamber" class="mid-photo" style="margin-top: 130px; margin-left: -80px; left: 20px;">
+            </div>
+        </div>
+        
+     
+        
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu">
+            <a href="base.html">Home</a>
+            <a href="AGENTS.html">Agents</a>
+            <a href="/maps.html">Maps</a>
+            <a href="/news.html">News</a>
+            <a href="/findyouragent.html">Find Your Agent</a>
+           
+        </div>
+        
+    </header>
+    <button id="muteButton"> Mute and move to Overview</button>
+
+    <div class="content">
+        <div class="video-container">
+            <video id="myVideo" controls autoplay loop muted>
+                
+                <source src="/pics/Untitled video - Made with Clipchamp (1).mp4" type="video/mp4">
+            </video>
+
+            <div class="video-controls" id="videoControls">
+                <button class="pause-button" onclick="togglePlayPause()">Pause</button>
+                <button class="volume-button" onclick="toggleVolume()">sound</button>
+                <button class="fullscreen-button" onclick="toggleFullscreen()">Fullscreen</button>
+                <input type="range" id="timeline" min="0" max="100" value="0" step="0.1" onchange="setVideoTime()">
+            </div>
+        </div>
+        
+ 
+
+    
+        <div id="scrollOffset" ></div>
+        <div class="container">
+            <section class="section" id="firstSection">
+                <img src="/pics/team.jpeg" alt="Placeholder Image" class="section-img">
+                <div class="section-content">
+                    <h2>Game Overview</h2>
+                    <p>Valorant, developed by Riot Games, is a tactical first-person shooter that emphasizes teamwork, strategy, and precision. In each match, players take on the role of one of Valorant's unique agents, each possessing special abilities that, when combined with precise shooting skills, can turn the tide of battle. The game offers various modes to suit different playstyles, with a core focus on team-based strategy, where every move counts toward victory.</p>
+                </div>
+            </section>
+    
+            <section class="section">
+                <img src="/pics/Valorant_Wallpaper_Killbanners.jpg" alt="Placeholder Image" class="section-img">
+                <div class="section-content">
+                    <h2>Game Modes</h2>
+                    <p>Valorant's diverse game modes cater to players of all skill levels. The competitive mode tests your mettle with ranked play, where every win or loss affects your rank and places you on the global leaderboard. Unranked mode offers a more casual experience while retaining the intense strategy the game is known for. Special event modes like Spike Rush and Deathmatch add fast-paced action, ensuring that players can enjoy a refreshing break from standard play. These modes not only diversify gameplay but also help players improve their tactical skills and teamwork.</p>
+                </div>
+            </section>
+    
+            <section class="section">
+                <img src="/03333-min.webp" alt="Placeholder Image" class="section-img">
+                <div class="section-content">
+                    <h2>Objectives</h2>
+                    <p>Valorant's core objective revolves around the Spike, an explosive device that the attacking team must plant at designated bomb sites, while the defending team works to prevent its detonation. This simple premise is layered with strategic depth, as both teams must balance offensive and defensive tactics, agent abilities, and precise gunplay. Each round presents an opportunity to outmaneuver the opposing team, with players needing to adapt their strategies based on the evolving dynamics of the match. The balance of timing, resource management, and communication is key to securing victory.</p>
+                </div>
+            </section>
+    
+            <section class="section">
+                <img src="/pics/champ.jpg" alt="Placeholder Image" class="section-img">
+                <div class="section-content">
+                    <h2>Teamplay</h2>
+                    <p>In Valorant, success is deeply rooted in effective team coordination and communication. Each agent's abilities are designed to complement those of their teammates, creating opportunities for synergistic plays that can overwhelm opponents. Whether it's using utility to block sightlines, heal teammates, or reveal enemy positions, each decision must be made with the team's strategy in mind. Players must constantly communicate about enemy locations, resources, and tactics to outsmart their opponents. Mastering teamwork in Valorant requires not only individual skill but also a deep understanding of how to leverage your agent's abilities in harmony with your squad.</p>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="column">
+                <h3>Contact us</h3>
+                <p>Address: AON Center, 200 East Randolph Street, Suite 5100, Chicago, IL 60601.</p>
+                <p>Phone: +01 2222 365 / (+91) 01 2345 6789</p>
+                <p>Email: support@valorantweb.com</p>
+                <p>Business Hours: 10:00 - 18:00, Mon - Sat</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100024519590806&mibextid=ZbWKwL"><img src="/5296499_fb_facebook_facebook logo_icon.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/shehab_diff?igsh=MTg5YWtjMWU4M2JqYg=="><img src="/pics/instagram_2111463.png" alt="Instagram"></a>
+                    <a href="https://x.com/VALORANT"><img src="/pics/twitter-alt-circle_12107562.png" alt="Twitter" style="background-color:whitesmoke; border-radius: 100%;"></a>
+                    <a href="https://www.youtube.com/channel/UC8CX0LD98EDXl4UYX1MDCXg"><img src="/pics/youtube_4494485.png" alt="YouTube"></a>
+                </div>
+                
+            </div>
+            <div class="column">
+                <h3>About</h3>
+                <p><a href="#">About Us</a> </p>
+                <p>
+                 <a href="#">Our Mission</a>
+                </p>
+                <p>
+                    <a href="#">Privacy Policy</a>
+                </p>
+                <p>
+                    <a href="#">Terms & Conditions</a>
+                </p>
+                <p>
+                    <a href="#">Contact Us</a>
+                </p>
+                
+            </div>
+        </footer>        
+        
+</body>
+</html>

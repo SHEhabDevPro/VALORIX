@@ -1,0 +1,722 @@
+/* General Styling */
+
+body {
+      font-family: 'Poppins', sans-serif; /* Replace with your actual font */
+    background-color: #1C1C1C; /* Dark background for gaming vibe */
+    color: #fff; /* White text for contrast */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    }
+    /* Scrollbar styling for WebKit browsers */
+    ::-webkit-scrollbar {
+        width: 12px; /* Width of the scrollbar */
+        height: 12px; /* Height of the scrollbar for horizontal scrollbars */
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Background color of the scrollbar track */
+        border-radius: 10px; /* Rounded corners for the track */
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #888; /* Color of the draggable part of the scrollbar */
+        border-radius: 10px; /* Rounded corners for the thumb */
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Darker color when hovering over the scrollbar thumb */
+    }
+    
+    /* Header Styling */
+    header {
+        background-color: #000000d4;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        margin: 0;
+       overflow: hidden;
+        box-sizing: border-box;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        
+    
+    }
+    
+    /* Lightning Line Animation */
+    header::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, #FF4655, #FF8C00, #FFD700, #00FFFF);
+        background-size: 200% 100%;
+        animation: lightning 2s infinite linear;
+        z-index: -1;
+    }
+    
+    @keyframes lightning {
+        0% {
+            background-position: -100% 0;
+        }
+        100% {
+            background-position: 100% 0;
+        }
+    }
+    
+    
+    /* Logo Container Styling */
+    .logo-container {
+        display: flex;
+        align-items: center;
+        margin-right: 20px; /* Adjust spacing between logo and nav */
+    }
+    
+    .logos {
+        height: 60px; /* Adjust logo size */
+        width: auto; /* Ensures the width scales proportionally */
+        margin-right: 15px; /* Space between the logo and the text */
+    }
+    
+    /* Header Title Styling */
+    header h1 {
+        font-size: 24px;
+        margin: 0; /* Remove default margin */
+    }
+    
+    /* Navigation Styling */
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: nowrap;
+        position: relative;
+    }
+    
+    /* Nav Links Styling */
+    .nav-links {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+        margin-right: 20px;
+        margin-left: 20px;
+        overflow: visible;
+        justify-content: space-between;
+    
+    }
+    
+    .nav-links a {
+        position: relative;
+        text-decoration: none;
+        color: #FF4655;
+        font-family: Arial, sans-serif;
+        font-weight: normal;
+        padding: 10px 20px;
+        transition: color 0.3s ease;
+        flex-shrink: 0;
+    }
+    
+    /* Animated Line Under Links on Hover */
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #00FFFF;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+    }
+    
+    /* Hover Effects */
+    .nav-links a:hover {
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+    
+    /* Expand Line on Hover */
+    .nav-links a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    /* Auth Links Styling */
+    .auth-links {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+    
+    .auth-links a {
+        position: relative;
+        text-decoration: none;
+        color: #ffffff; /* Valorant Red for links */
+        font-family: Arial, sans-serif;
+        font-weight: normal;
+        padding: 10px 15px; /* Adjust padding as needed */
+        margin-left: 10px; /* Space between auth links */
+        border-left: 2px solid #FF4655; /* Red border to separate */
+        transition: color 0.3s ease; /* Smooth transition for color change */
+    }
+    
+    /* Hover Effects */
+    .auth-links a:hover {
+        color: #FF4655; /* White on hover */
+        font-weight: bold;
+        border-left-color: #00FFFF; /* Neon Blue border on hover */
+    }
+    
+    /* Main menu styles */
+    .menu {
+        display: none; /* Hidden by default, shown when toggled */
+        flex-direction: column;
+        width: 100%; /* Full width of the viewport */
+        background-color: #000000d4; /* Semi-transparent black background */
+        position: absolute;
+        top: 100%; /* Position below the header */
+        left: 0;
+        z-index: 999; /* Ensure it's above other elements */
+        border-top: 2px solid #FF4655; /* Red top border */
+    }
+    
+    /* Styling for menu items */
+    .menu a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+        position: relative; /* Needed for the underline effect */
+        border-bottom: 1px solid #FF4655; /* Subtle border between items */
+        transition: color 0.3s ease;
+        z-index:9;
+    }
+    
+    /* Underline effect for menu items */
+    .menu a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #00FFFF; /* Red underline */
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0); /* Initially hidden */
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+    }
+    
+    /* Hover effect for menu items */
+    .menu a:hover {
+        color: #FFFFFF; /* White on hover */
+        font-weight: bold;
+    }
+    
+    /* Reveal the underline on hover */
+    .menu a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left; /* Animates from left to right */
+    }
+    
+    /* Remove border for the last item */
+    .menu li:last-child {
+        border-bottom: none;
+    }
+    
+    /* Hamburger Icon Styling */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+        transition: background-color 0.3s ease;
+    }
+    /* Rotating animation for the hamburger icon */
+    .hamburger.active {
+        transform: rotate(90deg);
+    }
+    
+    
+    /* Adjust for mobile view */
+    @media (max-width: 768px) {
+        nav {
+            display: none;
+        }
+        
+        .hamburger {
+            display: flex;
+        }
+    
+        .menu.active {
+            display: flex;
+        }
+      #timeline{
+        display: none;
+    
+      }
+    
+    
+    }
+    .menu.active {
+        position: fixed;
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        width: 100%;
+        background-color: #000000d4;
+        z-index: 999;
+    }
+
+/* Global headings styling */
+h1, h2, h3 {
+    color: #e94560; /* Primary color used for titles */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 20px;
+    color: white;
+
+}
+/* Basic styling for h2 elements *//* Base styling for h2 elements */
+h2 {
+    font-size: 50px; /* Larger font size for impact */
+    color: transparent; /* Make text color transparent for gradient effect */
+    font-family: 'Arial', sans-serif; /* Clean, modern sans-serif font */
+    font-weight: 900; /* Bold text */
+    margin: 20px 0; /* Spacing around the element */
+    text-align: center; /* Center the text */
+    position: relative; /* Position for pseudo-elements */
+    background: linear-gradient(135deg, #e94560, #f7d794); /* Gradient background */
+    -webkit-background-clip: text; /* Clip gradient to text */
+    -webkit-text-fill-color: transparent; /* Make text transparent */
+    line-height: 1.3; /* Adjust line height for readability */
+    padding: 10px; /* Add padding for spacing */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Shadow for depth */
+}
+
+/* Bottom line styling with hover effect */
+h2::before {
+    content: ''; /* Empty content for pseudo-element */
+    display: block; /* Block-level element */
+    position: absolute; /* Absolute positioning */
+    bottom: 0; /* Align to bottom */
+    left: 50%; /* Center align */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 100%; /* Full width */
+    height: 3px; /* Border thickness */
+    background-color: #f7d794; /* Border color */
+    transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+/* Additional bottom line with different styling */
+h2::after {
+    content: ''; /* Empty content for pseudo-element */
+    display: block; /* Block-level element */
+    position: absolute; /* Absolute positioning */
+    bottom: 0; /* Align to bottom */
+    left: 50%; /* Center align */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 100%; /* Full width */
+    height: 4px; /* Line thickness */
+    background-color: #e94560; /* Line color */
+    z-index: -1; /* Ensure it appears behind text */
+}
+
+
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc; /* Slightly faded text for the body */
+}
+
+/* Container for the agent cards */
+.agents-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+/* Agent card styling */
+.agent-card {
+    background-color: #252a34;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.agent-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Agent image */
+.agent-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Agent name and description */
+.agent-name {
+    font-size: 1.8rem;
+    color: #e94560;
+    padding: 15px 0;
+}
+
+.agent-description {
+    padding: 0 15px;
+    color: #ccc;
+}
+
+/* Agent abilities section */
+.agent-abilities {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: #16191f;
+}
+
+.ability {
+    color: #fff;
+    background-color: #e94560;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.ability:hover {
+    background-color: #2ebf91;
+}
+
+/* Button styling */
+.button {
+    background-color: #2ebf91;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e94560;
+    cursor: pointer;
+}
+
+/* Custom scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .agents-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .agent-card {
+        width: 90%;
+    }
+}
+
+/* Section Styling */
+#class-roles {
+    background-color: #1C1C1C;
+    padding: 50px 20px;
+    color: #fff;
+}
+
+#class-roles .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#class-roles h2 {
+    font-size: 3.2rem;
+    color: #be1834;
+    margin-bottom: 30px;
+}
+
+/* Container for role cards */
+.role-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the cards */
+    justify-content: center; /* Center the grid horizontally */
+}
+
+/* Styling for individual role cards */
+.role-card {
+    background-color: #252a34; /* Dark background for card */
+    border-radius: 12px; /* Slightly larger border-radius for smoother corners */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff; /* White text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+    position: relative; /* Ensure the h3 hover effect is relative to the card */
+}
+
+/* Keyframes for border animation */
+@keyframes borderAnimation {
+    0% {
+        border-color: #e94560; /* Starting color */
+    }
+    50% {
+        border-color: #f7d794; /* Middle color */
+    }
+    100% {
+        border-color: #e94560; /* Back to starting color */
+    }
+}
+
+/* Initial styling for role card images */
+.role-card img {
+    width: 80px; /* Icon size */
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 50%; /* Circular image for a modern look */
+    border: 2px solid #e94560; /* Add border matching the heading color */
+    transition: transform 0.5s ease, filter 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for role card images */
+.role-card:hover img {
+    filter: brightness(1.2) drop-shadow(0 0 3px #e94560); /* Increase brightness and apply glowing effect */
+    transform: scale(1.1) rotate(360deg); /* Enlarge and rotate the image */
+}
+
+
+/* Initial styling for role cards */
+.role-card {
+    background-color: #252a34; /* Dark background for card */
+    border-radius: 12px; /* Slightly larger border-radius for smoother corners */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+    color: #fff; /* White text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+    border: 2px solid transparent; /* Start with a transparent border */
+}
+
+/* Hover effect for role cards */
+.role-card:hover {
+    transform: translateY(-10px); /* Slightly lift card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8); /* Enhanced shadow on hover */
+    animation: borderAnimation 2.5s infinite; /* Apply border animation */
+}
+
+
+/* Keyframes for color animation */
+@keyframes colorMotion {
+    0% {
+        color: #e94560; /* Starting color */
+    }
+    50% {
+       color: #f7d794; /* Middle color */
+    }
+    100% {
+       color: #e94560; /* Back to starting color */
+    }
+}
+
+/* Role Card Heading */
+.role-card h3 {
+    font-size: 1.8rem;
+    color: #e94560; /* Initial color */
+    margin: 10px 0;
+    font-family: 'Cambria', serif; /* Ensure font-family is properly set */
+    animation: colorMotion 2.5s infinite linear; /* Apply color animation */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    background-color: #16191f; /* Transition for hover effect */
+}
+
+/* Hover Effect for Role Card */
+.role-card:hover {
+    transform: translateY(-10px); /* Slightly lift card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8); /* Enhanced shadow on hover */
+}
+
+/* Hover Effect for Heading on Card Hover */
+.role-card:hover h3 {
+    transform: scale(1.1); /* Slightly increase the size */
+    filter: brightness(1.2); /* Increase brightness */
+}
+
+/* Paragraph styling in role cards */
+.role-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ccc; /* Slightly faded text for description */
+    margin: 0;
+    text-align: left; /* Align text left for readability */
+}
+
+/* Styling for specific spans in role cards */
+.role-card .role-definition,
+.role-card .key-responsibilities,
+.role-card .essential-skills {
+    display: block; /* Ensure spans act like block elements */
+    font-size: 30px; /* Adjust font size for readability */
+    color: #e94560; /* Highlight color for headers */
+    font-weight: bold;
+    margin: 15px 0; /* Add margin for spacing */
+    text-align: left; /* Align text left for readability */
+}
+
+/* Additional styling for key responsibilities and essential skills */
+.role-card .key-responsibilities,
+.role-card .essential-skills {
+    font-size: 30px; /* Adjusted font size for sub-sections */
+}
+
+/* Sub-item styling with bullet points */
+.role-card .key-responsibilities p,
+.role-card .essential-skills p {
+    font-size: 0.9rem; /* Slightly smaller font size for sub-items */
+    color: #ddd; /* Light gray for sub-items */
+    margin: 5px 0;
+}
+
+.role-card .key-responsibilities p::before,
+.role-card .essential-skills p::before {
+    content: '• '; /* Bullet points */
+    color: #e94560; /* Bullet color */
+}
+
+.see-agents-btn {
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: #ff4757; /* Customize this color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.see-agents-btn:hover {
+    background-color: #ff6b81; /* Hover effect */
+}
+
+/* Footer Styling */
+footer {
+    position: relative; /* Ensure the pseudo-element is positioned relative to the footer */
+    padding: 20px; /* Adjust padding as needed */
+    background-color: #000000d4; /* Adjust the footer background color */
+    border-top: 3px solid transparent;
+    display: flex; 
+    justify-content: space-between;
+    color: #EAEAEA;
+    font-size: 14px;/* Space for the animated border */
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #FF4655 0%, #00FFFF 100%);
+    background-size: 200% 100%;
+    animation: lightning 2s infinite linear;
+    z-index: 1; /* Make sure it appears above the footer content */
+}
+
+@keyframes lightning {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+
+footer .column {
+    width: 30%; /* Each column takes up 30% of the footer width */
+}
+
+footer .column h3 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #00FFFF; /* Neon Blue for headings */
+}
+
+footer .column p, footer .column a {
+    margin: 5px 0;
+    text-decoration: none;
+    color: #EAEAEA;
+}
+
+footer .column a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer .social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start; /* Align icons to the left */
+    gap: 0; /* No space between icons */
+    margin: 0; /* Ensure no margin affects alignment */
+    padding: 0; /* Ensure no padding affects alignment */
+}
+
+.social-icons a {
+    display: block; /* Ensure the links are displayed as block elements */
+}
+
+.social-icons img {
+    display: block; /* Remove extra space below images */
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+}
+.body{
+    background-color: #1C1C1C;
+}
